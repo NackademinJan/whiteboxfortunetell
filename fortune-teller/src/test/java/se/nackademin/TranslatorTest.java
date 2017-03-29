@@ -27,44 +27,47 @@ public class TranslatorTest {
         System.out.println("getNoun");
         int idx = 0;
         Translator instance = new Translator();
-        String expResult = "";
+        String expResult = "en lönehöjning";
         String result = instance.getNoun(idx);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
+   /*
+    @Test
+    public void testGetNounWithNegativInput() {
+        System.out.println("getNoun");
+        int idx = -1;
+        Translator instance = new Translator();
+        
+        String expResult = "en lönehöjning";
+        String result = instance.getNoun(idx);
+        assertEquals(expResult, result);
+    }
+    */
 
     /**
      * Test of getVerb method, of class Translator.
      */
-    /*
     @Test
     public void testGetVerb() {
         System.out.println("getVerb");
         int idx = 0;
         Translator instance = new Translator();
-        String expResult = "";
+        String expResult = "springa";
         String result = instance.getVerb(idx);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
-    */
 
     /**
      * Test of getAdjective method, of class Translator.
      */
-    /*
     @Test
     public void testGetAdjective() {
         System.out.println("getAdjective");
         int idx = 0;
         Translator instance = new Translator();
-        String expResult = "";
+        String expResult = "stor";
         String result = instance.getAdjective(idx);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
-    */
+    
 }

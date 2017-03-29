@@ -25,6 +25,7 @@ public class FortuneTellerTest {
     }
     
     
+    
     @Test
     public void testSetNameWithValidInput() {
         MagicNumbers magicNumbersMock = mock(MagicNumbers.class);
