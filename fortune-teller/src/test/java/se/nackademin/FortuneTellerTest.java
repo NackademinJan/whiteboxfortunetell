@@ -83,7 +83,7 @@ public class FortuneTellerTest {
     }
        /*
         * This test asserts that the SetIncome function will return false if given a negative integer as input
-        * It is left commented out to get a viable code-coverage report as the fortune-teller program does not handle this correctly
+        * It is left commented out as SetIncome is supposed to handle this by putting a positive version of the input into a MagicNumbers Object
         */
     /*
         @Test
@@ -92,7 +92,8 @@ public class FortuneTellerTest {
         Translator translatorMock = mock(Translator.class);
         FortuneTeller fortuneTeller = new FortuneTeller(magicNumbersMock, translatorMock);
         boolean result = fortuneTeller.setIncome("-1");
-        assertFalse("should return false for invalid input", result);
+        assertTrue("should return true for valid input", result);
+        verify(magicNumbersMock, times(1)).setIncome(-1);
     }
     */
     
@@ -147,6 +148,7 @@ public class FortuneTellerTest {
        /*
         * This test asserts that the SetAge function will return false if given an integer larger than 130 or a negative integer as input
         * It is left commented out to get a viable code-coverage report as the fortune-teller program does not handle this correctly
+        * and SetAge is supposed to handle this by putting a positive version of the input into a MagicNumbers Object
         */
     /*
     @Test
@@ -191,6 +193,7 @@ public class FortuneTellerTest {
        /*
         * This test asserts that the SetHeight function will return false if given a negative integer as input
         * It is left commented out to get a viable code-coverage report as the fortune-teller program does not handle this correctly
+        * and Set is supposed to handle this by putting a positive version of the input into a MagicNumbers Object
         */
     /*
     @Test

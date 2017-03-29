@@ -21,7 +21,7 @@ public class TranslatorTest {
    /**
      * Test of getNoun method, of class Translator.
      */
-    /*
+
     @Test
     public void testGetNoun() {
         System.out.println("getNoun");
@@ -49,6 +49,7 @@ public class TranslatorTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+    */
 
     /**
      * Test of getAdjective method, of class Translator.
