@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 public class MagicNumberTest {
     MagicNumbers magicNumbers;
@@ -105,4 +106,23 @@ public class MagicNumberTest {
         int second = magicNumbers.calculateC();
         assertNotEquals("C should provide different values for different names", first, second);
     }
+    
+    
+    /*
+     * testCalculateAIs Breakable tries to break calculateA by causing that method to return a result that is not a result between 0-9, the current version produces a result of 10
+     *
+     *
+     */
+    
+    @Test
+    public void testCalculateAIsBreakable() {
+        magicNumbers.setName("Johan");
+        magicNumbers.setAge(9);
+        int resultNr = magicNumbers.calculateA();
+        boolean result = !(resultNr < 0) && !(resultNr >9);
+        assertTrue("calculateA should always produce a result between 0-9", result);    
+    }
+    
+    
+    
 }
