@@ -1,5 +1,7 @@
 package se.nackademin;
 
+import java.awt.event.ActionEvent;
+import javax.swing.JButton;
 import org.assertj.swing.edt.FailOnThreadViolationRepaintManager;
 import org.assertj.swing.edt.GuiActionRunner;
 import org.assertj.swing.edt.GuiQuery;
@@ -13,6 +15,7 @@ import se.nackademin.gui.FortuneTellerGui;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class FortuneTellerGuiIT {
     FortuneTeller fortuneTeller;
@@ -90,13 +93,13 @@ public class FortuneTellerGuiIT {
         window.optionPane().button().click();
     }
     
-    /*
+
     @Test(timeout = 10000)
-    public void testNotCalculateButtonClicked() {
-        FrameFixture.maximize();
-        
+    public void testWrongSourceButton() {
+        FailOnThreadViolationRepaintManager.uninstall();
+        ActionEvent wrongButton = new ActionEvent(new JButton(),0,"");
+        fortuneTellerGui.actionPerformed(wrongButton);
     }
-    */
     
     
     private FrameFixture window;
